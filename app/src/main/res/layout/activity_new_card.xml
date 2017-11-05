@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:elevation="4.0dp">
+        <!--android:theme="@style/AppTheme.AppBarOverlay"-->
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/new_card_toolbar"
+            android:layout_width="fill_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorPrimary"
+            android:fitsSystemWindows="true"
+            android:minHeight="0.0dp"
+            app:theme="@style/CryptoTracker.ToolbarTheme"><!--android:elevation="@dimen/card_elevation"-->
+
+            <com.devaton.cryptotracker.ui.typeface.VarelaRound
+                android:id="@+id/new_card_toolbar_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/new_tracking_card"
+                android:textColor="@color/white"
+                android:textSize="19.0sp" />
+
+        </android.support.v7.widget.Toolbar>
+
+        <View
+            android:id="@+id/shadow_view"
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:background="@drawable/shadow"
+            android:visibility="gone" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <com.devaton.cryptotracker.ui.typeface.VarelaRound
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/new_card_margin_top"
+        android:layout_marginBottom="@dimen/new_card_margin_top"
+        android:text="@string/select_crypto_currency"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:textSize="@dimen/new_card_text_size" />
+
+    <Spinner
+        android:id="@+id/crypto_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_margin="@dimen/card_horizontal_margin"
+        android:layout_gravity="center_horizontal"
+        android:prompt="@string/select_crypto"
+        android:spinnerMode="dialog"
+        android:entries="@array/cryptos"/>
+
+    <com.devaton.cryptotracker.ui.typeface.VarelaRound
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/new_card_margin_top"
+        android:layout_marginBottom="@dimen/new_card_margin_top"
+        android:text="@string/select_crypto_type"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:textSize="@dimen/new_card_text_size" />
+
+    <Spinner
+        android:id="@+id/currency"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_margin="@dimen/card_horizontal_margin"
+        android:layout_gravity="center_horizontal"
+        android:prompt="@string/select_currency"
+        android:spinnerMode="dialog"
+        android:entries="@array/currencies"/>
+
+    <Button
+        android:id="@+id/add"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/new_card_button_height"
+        android:background="@drawable/blue_to_dark_blue"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:layout_marginBottom="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="@dimen/activity_horizontal_margin"
+        android:text="@string/add"
+        android:textColor="@color/white"
+        android:textSize="@dimen/new_card_button_text_size" />
+
+    <RelativeLayout
+        android:id="@+id/loading_screen"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="60.0dip"
+        android:visibility="gone">
+
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:indeterminateTint="@color/colorPrimary"
+            android:indeterminateTintMode="src_atop" />
+        <!-- android:progressDrawable="@drawable/circular_progress_bar" -->
+
+    </RelativeLayout>
+
+</LinearLayout>

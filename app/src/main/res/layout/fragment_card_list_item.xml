@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/crypto_list_card"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/card_height"
+    android:layout_margin="@dimen/card_horizontal_margin"
+    android:background="?attr/selectableItemBackground"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="@dimen/cardview_default_radius"
+    app:cardElevation="@dimen/card_elevation"
+    app:cardPreventCornerOverlap="true"
+    app:cardUseCompatPadding="true"
+    app:contentPadding="@dimen/card_padding">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/item_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:background="?attr/selectableItemBackground"
+            android:src="@drawable/ic_action_close_blue" />
+
+        <ImageView
+            android:id="@+id/crypto_type_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="?attr/selectableItemBackground"
+            android:src="@drawable/ethereum_icon" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="@dimen/rate_container_top_margin"
+            android:layout_marginTop="@dimen/rate_container_top_margin"
+            android:orientation="horizontal">
+
+            <com.devaton.cryptotracker.ui.typeface.VarelaRound
+                android:id="@+id/currency_sign"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/naira_sign"
+                android:textColor="@color/dark_gray"
+                android:textSize="@dimen/rate_text_size"
+                android:textStyle="normal" />
+
+            <com.devaton.cryptotracker.ui.typeface.VarelaRound
+                android:id="@+id/rate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/rate_right_margin"
+                android:layout_marginStart="@dimen/rate_right_margin"
+                android:text="@string/number_placeholder"
+                android:textColor="@color/black"
+                android:textSize="@dimen/rate_text_size"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <Spinner
+            android:id="@+id/currency"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:entries="@array/currencies"
+            android:gravity="center"
+            android:prompt="@string/select_currency"
+            android:spinnerMode="dialog" />
+
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>

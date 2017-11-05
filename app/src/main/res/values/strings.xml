@@ -1,0 +1,96 @@
+<resources>
+    <string name="app_name">CryptoTracker</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="cryptotracker">CryptoTracker</string>
+    <string name="cards">Cards</string>
+    <string name="tracking_cards">Tracking Cards</string>
+    <string name="no_cards">No Tracking Cards</string>
+    <string name="naira_sign">₦</string>
+    <string name="number_placeholder">2593923.88</string>
+    <string-array name="currencies">
+        <item>@string/ngn</item>
+        <item>@string/usd</item>
+        <item>@string/gbp</item>
+        <item>@string/eur</item>
+        <item>@string/jpy</item>
+        <item>@string/cny</item>
+        <item>@string/aud</item>
+        <item>@string/nzd</item>
+        <item>@string/rub</item>
+        <item>@string/chf</item>
+        <item>@string/sek</item>
+        <item>@string/nok</item>
+        <item>@string/inr</item>
+        <item>@string/sgb</item>
+        <item>@string/twd</item>
+        <item>@string/try_</item>
+        <item>@string/brl</item>
+        <item>@string/mxn</item>
+        <item>@string/zar</item>
+        <item>@string/ils</item>
+    </string-array>
+    <string-array name="cryptos">
+        <item>Bitcoin</item>
+        <item>Ethereum</item>
+    </string-array>
+    <string-array name="currencies1">
+        <item>@string/ngn</item>
+        <item>Bitcoin</item>
+    </string-array>
+    <string name="select_currency">Select Currency</string>
+    <string name="select_crypto">Select Crypto-Currency</string>
+    <string name="new_tracking_card">New Tracking Card</string>
+    <string name="select_crypto_currency">Choose a crypto currency</string>
+    <string name="select_crypto_type">Choose a currency</string>
+    <string name="add">Add</string>
+    <string name="converter">Converter</string>
+    <string name="amount">Amount</string>
+    <string name="number_placeholder1">0.00</string>
+    <string name="exchange_rate">Exchange Rate:</string>
+    <string name="convert">Convert</string>
+    <string name="naira">Naira</string>
+    <string name="bitcoin">Bitcoin</string>
+    <string name="error_fetching_cards">Error occurred while fetching cards. Close app and try again.</string>
+    <string name="dollar_sign">$</string>
+    <string name="ngn">NGN</string>
+    <string name="usd">USD</string>
+    <string name="gbp">GBP</string>
+    <string name="eur">EUR</string>
+    <string name="jpy">JPY</string>
+    <string name="cny">CNY</string>
+    <string name="aud">AUD</string>
+    <string name="nzd">NZD</string>
+    <string name="rub">RUB</string>
+    <string name="chf">CHF</string>
+    <string name="sek">SEK</string>
+    <string name="nok">NOK</string>
+    <string name="inr">INR</string>
+    <string name="sgb">SGD</string>
+    <string name="twd">TWD</string>
+    <string name="try_">TRY</string>
+    <string name="brl">BRL</string>
+    <string name="mxn">MXN</string>
+    <string name="zar">ZAR</string>
+    <string name="ils">ILS</string>
+    <string name="british_pounds_sign">£</string>
+    <string name="euro_sign">€</string>
+    <string name="yen_sign">¥</string>
+    <string name="yuan_sign">元</string>
+    <string name="russian_ruble_sign">RUB</string>
+    <string name="swiss_franc_sign">CHF</string>
+    <string name="swedish_krona_sign">kr</string>
+    <string name="nor_krone_sign">kr</string>
+    <string name="indian_rupee_sign">INR</string>
+    <string name="turk_lira_sign">TRY</string>
+    <string name="brazil_real_sign">R$</string>
+    <string name="rand_sign">R</string>
+    <string name="shekel_sign">₪</string>
+    <string name="no_internet_connection">No internet connection. Please enable to get updates.</string>
+    <string name="card_duplicate">Card already created. Don\'t duplicate.</string>
+    <string name="no_connection">No internet to update rate immediately.</string>
+    <string name="one">1</string>
+    <string name="btc">BTC</string>
+    <string name="eth">ETH</string>
+</resources>

@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:elevation="4.0dp">
+        <!--android:theme="@style/AppTheme.AppBarOverlay"-->
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/converter_toolbar"
+            android:layout_width="fill_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorPrimary"
+            android:fitsSystemWindows="true"
+            android:minHeight="0.0dp"
+            app:theme="@style/CryptoTracker.ToolbarTheme"><!--android:elevation="@dimen/card_elevation"-->
+
+            <com.devaton.cryptotracker.ui.typeface.VarelaRound
+                android:id="@+id/converter_toolbar_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/converter"
+                android:textColor="@color/white"
+                android:textSize="19.0sp" />
+
+        </android.support.v7.widget.Toolbar>
+
+        <View
+            android:id="@+id/shadow_view"
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:background="@drawable/shadow"
+            android:visibility="gone" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <ImageView
+        android:id="@+id/crypto_type_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginEnd="@dimen/little_margin"
+        android:layout_marginRight="@dimen/little_margin"
+        android:layout_marginTop="@dimen/little_margin"
+        android:background="?attr/selectableItemBackground"
+        android:src="@drawable/bitcoin_icon" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="@dimen/rate_container_top_margin"
+        android:layout_marginTop="@dimen/rate_container_top_margin"
+        android:orientation="horizontal">
+
+        <com.devaton.cryptotracker.ui.typeface.VarelaRound
+            android:id="@+id/result_currency_sign"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/naira_sign"
+            android:textColor="@color/dark_gray"
+            android:textSize="@dimen/rate_text_size"
+            android:textStyle="normal" />
+
+        <com.devaton.cryptotracker.ui.typeface.VarelaRound
+            android:id="@+id/result"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/rate_right_margin"
+            android:layout_marginStart="@dimen/rate_right_margin"
+            android:text="@string/number_placeholder1"
+            android:maxLength="18"
+            android:textColor="@color/black"
+            android:textSize="@dimen/result_text_size"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:orientation="vertical">
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/amount_wrapper"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:textColorHint="@color/gray_1"
+            android:textStyle="bold"
+            android:visibility="visible"
+            app:hintEnabled="true"
+            app:hintTextAppearance="@style/CryptoTracker.TextInputLayoutTheme.TextAppearance">
+
+            <EditText
+                android:id="@+id/amount"
+                style="@style/CryptoTracker.EditText.Single"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/touchable_size"
+                android:layout_gravity="center_horizontal"
+                android:hint="@string/amount"
+                android:inputType="numberDecimal"
+                android:textCursorDrawable="@drawable/cursor_gray"
+                android:textSize="17.0sp"
+                android:textStyle="bold" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <com.devaton.cryptotracker.ui.typeface.VarelaRound
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/rate_right_margin"
+            android:layout_marginStart="@dimen/rate_right_margin"
+            android:layout_marginTop="@dimen/activity_horizontal_margin"
+            android:layout_marginBottom="@dimen/activity_horizontal_margin"
+            android:text="@string/exchange_rate"
+            android:textColor="@color/black"
+            android:textSize="@dimen/little_text_size" />
+
+        <com.devaton.cryptotracker.ui.typeface.VarelaRound
+            android:id="@+id/rate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/rate_right_margin"
+            android:layout_marginStart="@dimen/rate_right_margin"
+            android:text="@string/number_placeholder"
+            android:textColor="@color/black"
+            android:textSize="@dimen/rate_text_size"
+            android:textStyle="bold" />
+
+        <RadioGroup
+            android:id="@+id/currency_radio_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_horizontal_margin"
+            android:layout_marginBottom="@dimen/activity_horizontal_margin"
+            android:orientation="horizontal"
+            android:layout_gravity="center_horizontal">
+
+            <RadioButton
+                android:id="@+id/currency_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/card_horizontal_margin"
+                android:layout_marginEnd="@dimen/card_horizontal_margin"
+                android:checked="false"
+                android:text="@string/naira"
+                android:textSize="19sp" />
+
+            <RadioButton
+                android:id="@+id/currency_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/card_horizontal_margin"
+                android:layout_marginStart="@dimen/card_horizontal_margin"
+                android:text="@string/bitcoin"
+                android:textSize="19sp" />
+
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/convert"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/new_card_button_height"
+            android:background="@drawable/blue_to_dark_blue"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:layout_marginBottom="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="@dimen/activity_top_margin"
+            android:text="@string/convert"
+            android:textColor="@color/white"
+            android:textSize="@dimen/new_card_button_text_size" />
+
+    </LinearLayout>
+
+</LinearLayout>
